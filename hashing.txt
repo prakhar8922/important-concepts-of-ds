@@ -1,0 +1,26 @@
+ string::npos:
+
+It is a constant static member value with the highest possible value for an element of type size_t.
+It actually means until the end of the string.
+It is used as the value for a length parameter in the string’s member functions.
+As a return value, it is usually used to indicate no matches.
+for(int i=0;i<b.size();i++){
+              if(a.find(b[i])==string::npos){       to find whether the element present in b is present in a or not.
+                  s.insert(b[i]);
+              }
+          }
+
+You can use set STL in order to check if a number has only unique digits. For example, let us consider number 2020, then we can convert the number into the string,
+
+int num;
+cin>>num
+string s = to_string(num);
+After that, initialise a set with the contents of string s.
+
+set<int> uniDigits(s.begin(), s.end());
+Then we can compare the size of string s and newly created set uniDigits.
+
+if(s.size() == uniDigits.size()) { break; }
+As we know the property of sets, that set stores only unique numbers and discards repeated digits, then if both sizes are equal that means all digits are unique. If size of set is less than that of the string, that means the number does not contain distinct digits and all the repeated numbers are discarded.
+
+if str contains stringified digits and you are using ASCII or EBCDIC encoding (or perhaps others), then str[i] - '0' converts the character at position i to a numeric digit.

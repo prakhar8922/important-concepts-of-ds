@@ -1,0 +1,32 @@
+string::npos -It actually means until the end of the string.
+It is used as the value for a length parameter in the string’s member functions.
+As a return value, it is usually used to indicate no matches.
+
+
+
+You then add the stringstream and create an stringstream object, which will hold the value of the string you want to convert to an int and will be used during the process of converting it to an int.
+
+You use the << operator to extract the string from the string variable.
+
+Lastly, you use the >> operator to input the newly converted int value to the int variable.
+
+
+    //create a stringstream object, to input/output strings
+   stringstream ss; 
+   
+   // a variable named str, that is of string data type
+   string str = "7";
+   
+   // a variable named num, that is of int data type
+   int num;
+   
+   
+   //extract the string from the str variable (input the string in the stream)
+   ss << str;
+   
+   // place the converted value to the int variable
+   ss >> num;
+   
+   //print to the consloe
+   cout << num << endl; // prints the intiger value 7
+}

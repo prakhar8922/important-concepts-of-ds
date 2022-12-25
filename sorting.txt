@@ -1,0 +1,42 @@
+Bubble sort works by scanning (passing) the given array multiple times and repeatedly swapping adjacent elements until all elements in the array are sorted. In each pass, the largest element is pushed or bubbled to its correct position towards the end of the array. Hence the name bubble sort.
+for (i = 0; i < n-1; i++)
+
+// Last i elements are already in place
+for (j = 0; j < n-i-1; j++)
+if (arr[j] > arr[j+1])
+swap(&arr[j], &arr[j+1]);
+}
+                In the above code "n-i-1" ensures that we are not processing the already sorted elements again.
+
+
+Insertion sort is a simple sorting algorithm that works similar to the way you sort playing cards in your hands. The array is virtually split into a sorted and an unsorted part. Values from the unsorted part are picked and placed at the correct position in the sorted part.
+int i, key, j; 
+    for (i = 1; i < n; i++)
+    { 
+        key = arr[i]; 
+        j = i - 1; 
+
+        /* Move elements of arr[0..i-1], that are 
+        greater than key, to one position ahead 
+        of their current position */
+        while (j >= 0 && arr[j] > key)
+        { 
+            arr[j + 1] = arr[j]; 
+            j = j - 1; 
+        } 
+        arr[j + 1] = key; 
+    } 
+
+
+    std::next_permutation
+It is used to rearrange the elements in the range [first, last) into the next lexicographically greater permutation. 
+next_permutation(x.begin(),x.end()
+
+std::stoll(): This function converts a string, provided as an argument in the function call, to long long int. It parses str interpreting its content as an integral number of the specified base, which is returned as a value of type long long int.
+
+unique() removes adjacent duplicates.
+     unique function puts all unique elements at
+     the beginning and returns iterator pointing
+     to the first element after unique element.
+     Erase function removes elements between two
+     given iterators

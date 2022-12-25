@@ -1,0 +1,12 @@
+Priority queue- The insertion of elements in the priority queue is similar to the ordinary queue, but the removal of the elements is done according to the priority. So, the element having the highest priority pops out first. In case of multiple elements with the same priority, the element which occurs first will be served first.
+syntax-priority_queue<int,vector<int>,greater<int>>name of the queue 
+ greater is used for ascending order in queue ,else do not use greater ,default is  descending order.
+
+ sliding window technique- This technique shows how a nested for loop in some problems can be converted to a single for loop to reduce the time complexity.
+ The technique can be best understood with the window pane in bus, consider a window of length n and the pane which is fixed in it of length k. Consider, initially the pane is at extreme left i.e., at 0 units from the left. Now, co-relate the window with array arr[] of size n and pane with current_sum of size k elements. Now, if we apply force on the window such that it moves a unit distance ahead. The pane will cover next k consecutive elements. 
+Consider an array arr[] = {5, 2, -1, 0, 3} and value of k = 3 and n = 5
+Applying sliding window technique : 
+
+We compute the sum of first k elements out of n terms using a linear loop and store the sum in variable window_sum.
+Then we will graze linearly over the array till it reaches the end and simultaneously keep track of maximum sum.
+To get the current sum of block of k elements just subtract the first element from the previous block and add the last element of the current block .
